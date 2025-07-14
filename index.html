@@ -114,6 +114,34 @@
       <li>📸 Instagram: <a href="https://instagram.com/rocha_digital55" target="_blank" style="color: #ff914d;">@rocha_digital55</a></li>
     </ul>
   </section>
+<!-- FORMULÁRIO DE ORÇAMENTO -->
+<section id="orcamento">
+  <h2>📝 Solicite um Orçamento</h2>
+  <p>Preencha os dados abaixo e receba seu orçamento direto no WhatsApp!</p>
 
+  <form onsubmit="enviarOrcamento(); return false;" style="max-width: 600px;">
+    <label>Nome:</label><br>
+    <input type="text" id="nome" required style="width:100%; padding:10px; border-radius:6px; margin-bottom:15px;"><br>
+
+    <label>E-mail:</label><br>
+    <input type="email" id="email" required style="width:100%; padding:10px; border-radius:6px; margin-bottom:15px;"><br>
+
+    <label>Serviço desejado:</label><br>
+    <select id="servico" style="width:100%; padding:10px; border-radius:6px; margin-bottom:15px;">
+      <option value="Site Profissional">Site Profissional</option>
+      <option value="Cardápio Digital">Cardápio Digital</option>
+      <option value="Identidade Visual">Identidade Visual</option>
+      <option value="Chatbot WhatsApp">Chatbot WhatsApp</option>
+      <option value="Pacote Completo">Pacote Completo</option>
+    </select><br>
+
+    <label>Mensagem:</label><br>
+    <textarea id="mensagem" rows="4" style="width:100%; padding:10px; border-radius:6px;"></textarea><br>
+
+    <button type="submit" style="margin-top:15px; padding:12px 20px; background:#ff914d; color:#000; font-weight:bold; border:none; border-radius:8px;">
+      📩 Enviar orçamento
+    </button>
+  </form>
+</section>
 </body>
 </html>
