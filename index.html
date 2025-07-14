@@ -1,64 +1,118 @@
-<!-- index.html --><!DOCTYPE html><html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rocha Digital - Soluções para seu negócio</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background: #0d0d0d;
-        color: #fff;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-      }
-      .container {
-        padding: 30px;
-        max-width: 800px;
-        margin: auto;
-      }
-      h1 {
-        color: #ff914d;
-        font-size: 2.5em;
-      }
-      nav {
-        margin-bottom: 20px;
-      }
-      nav a {
-        color: #ff914d;
-        margin-right: 15px;
-        text-decoration: none;
-      }
-      .servico {
-        background: #1a1a1a;
-        padding: 20px;
-        margin-bottom: 20px;
-        border-radius: 12px;
-        border-left: 5px solid #ff914d;
-      }
-      .botao {
-        display: block;
-        background: #ff914d;
-        color: #000;
-        text-align: center;
-        padding: 15px;
-        font-size: 18px;
-        text-decoration: none;
-        border-radius: 8px;
-        margin-top: 30px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="contato.html">Contato</a>
-      </nav>
-      <h1>🚀 Pacote Digital Rocha</h1>
-      <p>Soluções digitais completas para seu pequeno negócio, com preços acessíveis e entrega rápida!</p>
-      <a class="botao" href="https://wa.me/5527996163425" target="_blank">💬 Fale comigo no WhatsApp</a>
+<!-- index.html --<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pacote Digital Rocha</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #ff914d;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #ff914d;
+    }
+    .botao {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 25px;
+      background: #ff914d;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    .servico-box {
+      background: #1a1a1a;
+      border-left: 4px solid #ff914d;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><strong>Rocha Digital</strong></div>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- INÍCIO -->
+  <section id="inicio">
+    <h1>🚀 Pacote Digital Rocha</h1>
+    <p>Soluções digitais completas para seu pequeno negócio, com preços acessíveis e entrega rápida!</p>
+    <a class="botao" href="https://wa.me/5527996163425" target="_blank">💬 Fale comigo no WhatsApp</a>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <h2>🛠️ Nossos Serviços</h2>
+
+    <div class="servico-box">
+      <h3>🌐 Site Profissional</h3>
+      <p>Site moderno, responsivo e com visual personalizado.</p>
+      <strong>R$ 199</strong>
     </div>
-  </body>
-</html><!-- servicos.html --><!-- Criamos a seguir --><!-- contato.html --><!-- Criamos depois -->
+
+    <div class="servico-box">
+      <h3>📲 Cardápio Digital</h3>
+      <p>Ideal para pizzarias, lanchonetes e delivery. Layout interativo e botão do WhatsApp.</p>
+      <strong>R$ 149</strong>
+    </div>
+
+    <div class="servico-box">
+      <h3>🎨 Identidade Visual</h3>
+      <p>Logo, cores, fontes e estilo visual que representa sua marca.</p>
+      <strong>R$ 99</strong>
+    </div>
+
+    <div class="servico-box">
+      <h3>🤖 Chatbot WhatsApp</h3>
+      <p>Automatize o atendimento e vendas com respostas inteligentes.</p>
+      <strong>R$ 49</strong>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <h2>📞 Entre em Contato</h2>
+    <p>Vamos conversar sobre o seu projeto?</p>
+    <ul>
+      <li>📱 WhatsApp: <a href="https://wa.me/5527996163425" target="_blank" style="color: #ff914d;">Clique aqui</a></li>
+      <li>📧 E-mail: <a href="mailto:premier.midia01@gmail.com" style="color: #ff914d;">premier.midia01@gmail.com</a></li>
+      <li>📸 Instagram: <a href="https://instagram.com/rocha_digital55" target="_blank" style="color: #ff914d;">@rocha_digital55</a></li>
+    </ul>
+  </section>
+
+</body>
+</html>
