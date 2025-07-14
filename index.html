@@ -143,5 +143,20 @@
     </button>
   </form>
 </section>
+  <script>
+  function enviarOrcamento() {
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const servico = document.getElementById("servico").value;
+    const mensagem = document.getElementById("mensagem").value;
+
+    const texto = `Olá, me chamo *${nome}*!\n\nQuero solicitar um orçamento para o serviço de *${servico}*.\n\n📧 E-mail: ${email}\n📝 Mensagem: ${mensagem}`;
+
+    const numero = "5527996163425";
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, "_blank");
+  }
+  </script>
 </body>
 </html>
