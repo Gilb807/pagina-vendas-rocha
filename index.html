@@ -1,203 +1,160 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pacote Digital Rocha | Soluções para Pequenos Negócios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rocha Soluções Digitais</title>  <!-- Meta para compartilhamento -->  <meta property="og:title" content="Rocha Soluções Digitais">
+  <meta property="og:description" content="Soluções digitais para pequenos negócios com preço justo, agilidade e resultado.">
+  <meta property="og:image" content="https://pagina-vendas-rocha.vercel.app/banner-hero.png">
+  <meta property="og:url" content="https://pagina-vendas-rocha.vercel.app">
+  <meta name="twitter:card" content="summary_large_image">  <style>
+    :root {
+      --cor-primaria: #14213D;
+      --cor-secundaria: #FCA311;
+      --cor-fundo: #E5E5E5;
+      --cor-texto: #1A1A1A;
+      --cor-branca: #FFFFFF;
+    }
 
-  <!-- Meta SEO -->
-  <meta name="description" content="Pacote digital completo com site, cardápio digital, identidade visual e chatbot WhatsApp. Soluções acessíveis e rápidas para pequenos negócios.">
-  <meta name="keywords" content="sites para pequenos negócios, cardápio digital, chatbot WhatsApp, identidade visual, pacote digital acessível">
-  <meta name="author" content="Rocha Soluções Digitais">
-
-  <!-- Open Graph para Facebook, Instagram, WhatsApp -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Rocha Soluções Digitais | Sites, Cardápios e Chatbots">
-  <meta property="og:description" content="Soluções digitais acessíveis para pequenos negócios. Transforme sua presença online com um pacote completo e rápido.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/Gilb807/pagina-vendas-rocha/main/banner-hero.png">
-  <meta property="og:url" content="https://pagina-vendas-rocha.vercel.app/">
-  <meta property="og:site_name" content="Rocha Digital">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Rocha Soluções Digitais">
-  <meta name="twitter:description" content="Seu pacote digital completo com site, cardápio e chatbot por um preço acessível.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/Gilb807/pagina-vendas-rocha/main/banner-hero.png">
-
-  <!-- Estilo -->
-  <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0d0d0d;
-      color: #fff;
-      scroll-behavior: smooth;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
     }
 
     header {
-      background: #1a1a1a;
-      padding: 15px 30px;
+      background: var(--cor-primaria);
+      color: var(--cor-branca);
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 999;
     }
 
     nav a {
-      color: #ff914d;
-      margin: 0 10px;
+      color: var(--cor-secundaria);
+      margin-left: 20px;
       text-decoration: none;
       font-weight: bold;
     }
 
     section {
       padding: 60px 30px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
     }
 
-    h1, h2 {
-      color: #ff914d;
+    .hero {
+      background: linear-gradient(to right, #14213D, #000000), url('banner-hero.png') no-repeat center/cover;
+      color: white;
+      text-align: center;
+      padding: 160px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
     }
 
     .botao {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 25px;
-      background: #ff914d;
+      background-color: var(--cor-secundaria);
       color: #000;
-      font-weight: bold;
+      padding: 15px 25px;
+      border: none;
       border-radius: 8px;
       text-decoration: none;
+      font-weight: bold;
       font-size: 16px;
+      margin-top: 20px;
+      display: inline-block;
     }
 
-    .caixa-servico {
-      background: #1a1a1a;
-      border-left: 4px solid #ff914d;
+    .servico-box {
+      background-color: white;
+      border-left: 4px solid var(--cor-secundaria);
       padding: 20px;
+      border-radius: 8px;
       margin-bottom: 20px;
-      border-radius: 12px;
     }
 
     footer {
+      background-color: var(--cor-primaria);
+      color: #aaa;
       text-align: center;
-      padding: 30px;
-      background: #1a1a1a;
-      color: #888;
+      padding: 30px 10px;
+      font-size: 14px;
     }
 
     footer a {
-      color: #ff914d;
+      color: var(--cor-secundaria);
+      text-decoration: none;
       margin: 0 5px;
     }
 
-    .banner {
-      width: 100%;
-      max-width: 1920px;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
       }
-
       nav {
-        margin-top: 10px;
+        flex-direction: column;
+        gap: 10px;
       }
     }
-  </style>
-</head>
+  </style></head>
 <body>
-
   <header>
-    <div><strong>Rocha Digital</strong></div>
+    <div><strong>Rocha Soluções Digitais</strong></div>
     <nav>
+      <a href="#inicio">Início</a>
+      <a href="portfolio.html">Portfólio</a>
       <a href="#servicos">Serviços</a>
-      <a href="#portfolio">Portfólio</a>
-      <a href="mailto:premier.midia01@gmail.com">Contato</a>
+      <a href="#contato">Contato</a>
     </nav>
-  </header>
+  </header>  <!-- HERO -->  <section id="inicio" class="hero">
+    <h1>Soluções digitais para pequenos negócios</h1>
+    <a class="botao" href="portfolio.html">Ver Portfólio</a>
+    <a class="botao" href="https://wa.me/5527996163425" target="_blank">Fale pelo WhatsApp</a>
+  </section>  <!-- SERVIÇOS -->  <section id="servicos">
+    <h2>Serviços Oferecidos</h2><div class="servico-box">
+  <h3>Site Profissional</h3>
+  <p>Presença online com identidade forte e design responsivo.</p>
+  <strong>A partir de R$ 199</strong>
+</div>
 
-  <!-- Banner -->
-  <section>
-    <img src="https://raw.githubusercontent.com/Gilb807/pagina-vendas-rocha/main/banner-hero.png" alt="Soluções digitais para pequenos negócios" class="banner">
-  </section>
+<div class="servico-box">
+  <h3>Cardápio Digital Interativo</h3>
+  <p>Perfeito para lanchonetes, pizzarias e delivery com botão para WhatsApp.</p>
+  <strong>A partir de R$ 149</strong>
+</div>
 
-  <!-- Serviços -->
-  <section id="servicos">
-    <h2>Pacote Digital Rocha 🚀</h2>
-    <p>Soluções digitais completas para seu pequeno negócio, com preços acessíveis e entrega rápida:</p>
+<div class="servico-box">
+  <h3>Identidade Visual</h3>
+  <p>Logo, cores e estilo que comunicam a essência da sua marca.</p>
+  <strong>A partir de R$ 99</strong>
+</div>
 
-    <div class="caixa-servico">
-      <h3>🧑‍💻 Website</h3>
-      <p>Tenha sua presença profissional na internet com um site moderno, responsivo e rápido.</p>
-    </div>
+<div class="servico-box">
+  <h3>Chatbot para WhatsApp</h3>
+  <p>Respostas automáticas, vendas 24h e atendimento inteligente.</p>
+  <strong>A partir de R$ 49</strong>
+</div>
 
-    <div class="caixa-servico">
-      <h3>🤖 Chatbot WhatsApp</h3>
-      <p>Automatize o atendimento e gere mais vendas com nosso bot inteligente.</p>
-    </div>
-
-    <div class="caixa-servico">
-      <h3>📱 App e Cardápio Digital</h3>
-      <p>Ideal para restaurantes, pizzarias, lanchonetes e delivery em geral.</p>
-    </div>
-
-    <a class="botao" href="https://wa.me/5527996163425" target="_blank">💬 Fale comigo no WhatsApp</a>
-  </section>
-
-  <!-- Portfólio -->
-  <section id="portfolio">
-    <h2>🌟 Portfólio</h2>
-    <p>Conheça alguns dos nossos projetos em andamento e finalizados:</p>
-
-    <div class="caixa-servico">
-      <h3>🍕 Pizza Tycoon CalabrinCoin</h3>
-      <p>Game com economia real, integração com pizzarias e token próprio.</p>
-      <a href="https://app--pizza-tycoon-calabrin-coin-6db3b48d.base44.app/Home" class="botao" target="_blank">Ver projeto</a>
-    </div>
-
-    <div class="caixa-servico">
-      <h3>🎂 Lili Cakes - Bolos Afetivos</h3>
-      <p>Identidade visual doce e catálogo para confeitaria artesanal.</p>
-      <a href="https://app--lili-cakes-bolos-afetivos-copy-4c0726d0.base44.app/" class="botao" target="_blank">Ver projeto</a>
-    </div>
-
-    <div class="caixa-servico">
-      <h3>🍩 Dona Bet Rosquinhas</h3>
-      <p>Cardápio digital para venda de rosquinhas caseiras.</p>
-      <a href="https://app--dona-bet-rosquinhas-4822e7f8.base44.app" class="botao" target="_blank">Acessar site</a>
-    </div>
-
-    <div class="caixa-servico">
-      <h3>⛪ Além do Jardim</h3>
-      <p>App cristão com IA devocional, marketplace e diário espiritual.</p>
-      <a href="https://app--alem-do-jardim-7fbf70e8.base44.app/Home" class="botao" target="_blank">Ver aplicativo</a>
-    </div>
-
-    <div class="caixa-servico">
-      <h3>🛡️ Vigilante360</h3>
-      <p>Gestão de segurança patrimonial com login privado e dashboard.</p>
-      <a href="https://app--vigilante360-6c27e348.base44.app/login" class="botao" target="_blank">Entrar no sistema</a>
-    </div>
-
-    <div class="caixa-servico">
-      <h3>✂️ Estilo Fino Barber</h3>
-      <p>Landing page em construção para barbearia moderna.</p>
-      <a href="https://app--estilo-fino-barber-4e6730b3.base44.app/" class="botao" target="_blank">Ver protótipo</a>
-    </div>
-  </section>
-
-  <!-- Rodapé -->
-  <footer>
+  </section>  <!-- CONTATO -->  <section id="contato">
+    <h2>Entre em Contato</h2>
+    <p>Vamos conversar sobre sua ideia?</p>
+    <ul>
+      <li>📱 WhatsApp: <a href="https://wa.me/5527996163425" target="_blank">Clique aqui</a></li>
+      <li>📧 E-mail: <a href="mailto:premier.midia01@gmail.com">premier.midia01@gmail.com</a></li>
+      <li>📸 Instagram: <a href="https://instagram.com/rocha_digital55" target="_blank">@rocha_digital55</a></li>
+    </ul>
+  </section>  <footer>
     © 2025 Rocha Soluções Digitais • Feito com ❤️<br>
     <a href="https://wa.me/5527996163425">WhatsApp</a> |
     <a href="mailto:premier.midia01@gmail.com">E-mail</a> |
     <a href="https://instagram.com/rocha_digital55" target="_blank">Instagram</a>
   </footer>
-
 </body>
-</html>
+                         </html>
