@@ -1,138 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio | Rocha Digital</title>
-  <style>
-    :root {
-      --laranja: #ff914d;
-      --azul: #0a1a3d;
-      --branco: #ffffff;
-      --cinza: #f9f9f9;
-      --preto: #000000;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: var(--branco);
-      color: var(--preto);
-      padding: 40px 20px;
-    }
-
-    h1 {
-      text-align: center;
-      color: var(--azul);
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    p.intro {
-      text-align: center;
-      margin-bottom: 40px;
-      color: #555;
-    }
-
-    .projeto {
-      background: var(--cinza);
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 800px;
-      border-left: 5px solid var(--laranja);
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .projeto h3 {
-      color: var(--azul);
-      margin-top: 0;
-    }
-
-    .projeto p {
-      color: #333;
-    }
-
-    .projeto a {
-      display: inline-block;
-      margin-top: 10px;
-      background: var(--laranja);
-      color: var(--preto);
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .projeto a:hover {
-      background: #ffa96c;
-    }
-
-    .formulario {
-      background-color: var(--cinza);
-      padding: 30px;
-      max-width: 800px;
-      margin: 50px auto 0;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .formulario h2 {
-      color: var(--azul);
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .formulario p {
-      color: #333;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .formulario textarea {
-      width: 100%;
-      height: 100px;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      resize: vertical;
-      margin-bottom: 20px;
-    }
-
-    .formulario a.botao {
-      background-color: #25D366;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      display: block;
-      text-align: center;
-    }
-
-    .formulario a.botao:hover {
-      background-color: #1ebc59;
-    }
-
-    .voltar {
-      text-align: center;
-      margin-top: 50px;
-    }
-
-    .voltar a {
-      color: var(--laranja);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-      .projeto, .formulario {
 <!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -147,6 +12,7 @@
       --cinza: #f9f9f9;
       --preto: #000000;
       --cinza-escuro: #1a1a1a;
+      --verde-whats: #25D366;
     }* {
   box-sizing: border-box;
   margin: 0;
@@ -244,8 +110,8 @@ section.formulario {
 .formulario button {
   width: 100%;
   padding: 14px;
-  background: var(--laranja);
-  color: var(--preto);
+  background: var(--verde-whats);
+  color: white;
   font-weight: bold;
   border: none;
   border-radius: 8px;
@@ -253,7 +119,7 @@ section.formulario {
 }
 
 .formulario button:hover {
-  background: var(--laranja-hover);
+  background: #1ebc59;
 }
 
 .voltar {
@@ -266,6 +132,24 @@ section.formulario {
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
+}
+
+footer {
+  background-color: var(--azul);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.whatsapp-footer {
+  background-color: var(--verde-whats);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
 }
 
 @media (max-width: 600px) {
@@ -288,7 +172,7 @@ section.formulario {
     <a href="#">🔗 Acessar projeto</a>
   </div>
   <div class="projeto">
-    <h3>🍰 Lili Cakes - Bolos Afetivos</h3>
+    <h3>🎂 Lili Cakes - Bolos Afetivos</h3>
     <p>Identidade visual afetiva para confeitaria artesanal, com apelo emocional e branding delicado.</p>
     <a href="#">🔗 Ver projeto</a>
   </div>
@@ -316,7 +200,7 @@ section.formulario {
     <h3>✂️ Estilo Fino Barber</h3>
     <p>Landing page institucional moderna para barbearia. <strong style="color: var(--laranja);">⚠️ Página em construção</strong></p>
     <a href="#">🔗 Acessar o protótipo</a>
-  </div>  <!-- FORMULÁRIO -->  <section class="formulario">
+  </div>  <!-- FORMULÁRIO DE ORÇAMENTO -->  <section class="formulario">
     <h2>📲 Solicite um Orçamento Rápido</h2>
     <p>Descreva brevemente o projeto que você tem em mente e receba uma resposta no WhatsApp.</p>
     <form onsubmit="enviarWhatsApp(); return false;">
@@ -329,7 +213,10 @@ section.formulario {
 
   </section>  <div class="voltar">
     <a href="index.html">⬅️ Voltar para a página inicial</a>
-  </div>  <script>
+  </div>  <!-- RODAPÉ -->  <footer>
+    <p>© 2025 Rocha Soluções Digitais. Todos os direitos reservados.</p>
+    <a href="https://wa.me/5527996163425" class="whatsapp-footer">💬 Orçamento Rápido</a>
+  </footer>  <script>
     function enviarWhatsApp() {
       const nome = document.getElementById("nome").value;
       const descricao = document.getElementById("descricao").value;
