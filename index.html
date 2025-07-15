@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rocha Digital</title>
   <meta name="description" content="Soluções digitais para pequenos negócios com qualidade e preço justo.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --laranja: #ff914d;
+      --laranja: #FF6B00;
       --azul: #0a1a3d;
       --branco: #ffffff;
-      --cinza: #f3f3f3;
-      --preto: #000000;
+      --cinza: #f5f7fa;
+      --preto: #0f0f0f;
     }
 
     * {
@@ -21,7 +22,7 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: var(--branco);
       color: var(--preto);
     }
@@ -32,7 +33,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid var(--laranja);
+      border-bottom: 3px solid var(--laranja);
       position: sticky;
       top: 0;
       z-index: 999;
@@ -40,71 +41,84 @@
 
     header h1 {
       color: var(--azul);
-      font-size: 22px;
+      font-size: 24px;
+      font-weight: 700;
     }
 
     nav a {
       color: var(--laranja);
       margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
 
     .hero {
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.95)), url('banner-hero.png') center/cover no-repeat;
-      height: 350px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,1)), url('banner-hero.png') center/cover no-repeat;
+      height: 360px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 0 20px;
     }
 
     .hero h2 {
-      font-size: 28px;
+      font-size: 30px;
       color: var(--azul);
-      font-weight: bold;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px #fff;
     }
 
     .hero p {
-      color: var(--preto);
+      color: #222;
       font-size: 16px;
       margin-top: 10px;
     }
 
     .hero .buttons {
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     .hero .buttons a {
       background-color: var(--laranja);
-      color: var(--preto);
+      color: var(--branco);
       text-decoration: none;
-      padding: 12px 20px;
+      padding: 12px 24px;
       border-radius: 6px;
-      margin: 0 10px;
-      font-weight: bold;
-      display: inline-block;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .hero .buttons a:hover {
+      background-color: #d45700;
     }
 
     section {
-      padding: 40px 20px;
+      padding: 50px 20px;
       background-color: var(--cinza);
     }
 
     section h3 {
       color: var(--azul);
       margin-bottom: 20px;
-      font-size: 24px;
+      font-size: 26px;
+      font-weight: 700;
+      text-align: center;
     }
 
     .servico {
       background-color: var(--branco);
       border-left: 5px solid var(--laranja);
       padding: 20px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .servico:hover {
+      transform: translateY(-3px);
     }
 
     .servico strong {
@@ -112,29 +126,37 @@
       color: var(--azul);
     }
 
+    .servico em {
+      color: #666;
+      font-size: 14px;
+    }
+
     .contato {
       background-color: var(--branco);
-      color: var(--preto);
       text-align: center;
-      padding: 40px 20px;
-      border-top: 2px solid var(--laranja);
+      padding: 50px 20px;
+      border-top: 3px solid var(--laranja);
     }
 
     .contato h3 {
       color: var(--laranja);
-      font-size: 24px;
+      font-size: 26px;
       margin-bottom: 15px;
+    }
+
+    .contato p {
+      margin-bottom: 20px;
+      font-size: 16px;
     }
 
     .contato a {
       background-color: #25D366;
       color: white;
       text-decoration: none;
-      padding: 15px 25px;
+      padding: 14px 28px;
       border-radius: 8px;
+      font-weight: 600;
       display: inline-block;
-      font-weight: bold;
-      margin-top: 10px;
     }
 
     footer {
@@ -145,6 +167,21 @@
       font-size: 14px;
     }
 
+    /* Botão flutuante WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
     @media (max-width: 600px) {
       header {
         flex-direction: column;
@@ -152,7 +189,7 @@
       }
 
       .hero h2 {
-        font-size: 22px;
+        font-size: 24px;
       }
 
       nav {
@@ -161,7 +198,7 @@
 
       .hero .buttons a {
         margin: 8px 0;
-        display: block;
+        display: inline-block;
       }
     }
   </style>
@@ -180,7 +217,7 @@
 
   <section class="hero" id="inicio">
     <h2>🚀 Soluções digitais para pequenos negócios</h2>
-    <p>Sites, apps, identidade visual, cardápio digital e automações com<br> preço justo e agilidade.</p>
+    <p>Sites, apps, identidade visual, cardápio digital e automações<br> com preço justo e agilidade.</p>
     <div class="buttons">
       <a href="https://wa.me/5527999997863" target="_blank">💬 Fale comigo no WhatsApp</a>
     </div>
@@ -188,27 +225,27 @@
 
   <section id="servicos">
     <h3>Serviços Oferecidos</h3>
-    
+
     <div class="servico">
-      <strong>Site Profissional</strong><br>
+      <strong>💼 Site Profissional</strong><br>
       Presença online com identidade forte e design responsivo.<br>
       <em>A partir de R$ 199</em>
     </div>
-    
+
     <div class="servico">
-      <strong>Cardápio Digital Interativo</strong><br>
+      <strong>🍕 Cardápio Digital Interativo</strong><br>
       Perfeito para lanchonetes, pizzarias e delivery com botão para WhatsApp.<br>
       <em>A partir de R$ 149</em>
     </div>
-    
+
     <div class="servico">
-      <strong>Identidade Visual</strong><br>
+      <strong>🎨 Identidade Visual</strong><br>
       Logo, cores e estilo que comunicam a essência da sua marca.<br>
       <em>A partir de R$ 99</em>
     </div>
-    
+
     <div class="servico">
-      <strong>Chatbot para WhatsApp</strong><br>
+      <strong>🤖 Chatbot para WhatsApp</strong><br>
       Respostas automáticas, vendas 24h e atendimento inteligente.<br>
       <em>A partir de R$ 49</em>
     </div>
@@ -217,23 +254,14 @@
   <section class="contato" id="contato">
     <h3>📞 Entre em Contato</h3>
     <p>Fale com a gente diretamente pelo canal que preferir:</p>
-    <a
-  href="https://wa.me/5527996163425?text=Olá!%20Vi%20seu%20site%20e%20tenho%20interesse%20em%20um%20orçamento%20para%20meu%20projeto%20digital."
-  target="_blank"
-  style="
-    display: inline-block;
-    background-color: #ff914d;
-    color: #000;
-    font-weight: bold;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-top: 20px;
-  "
->
-  💬 Fale comigo no WhatsApp
-</a>
+    <a href="https://wa.me/5527996163425?text=Olá!%20Vi%20seu%20site%20e%20tenho%20interesse%20em%20um%20orçamento%20para%20meu%20projeto%20digital." target="_blank">
+      💬 Fale comigo no WhatsApp
+    </a>
   </section>
+
+  <a class="whatsapp-float" href="https://wa.me/5527996163425" target="_blank">
+    💬 Orçamento Rápido
+  </a>
 
   <footer>
     &copy; 2025 Rocha Soluções Digitais. Todos os direitos reservados.
