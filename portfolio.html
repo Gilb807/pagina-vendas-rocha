@@ -189,14 +189,36 @@
     <a href="https://app--estilo-fino-barber-4e6730b3.base44.app/" target="_blank">🔗 Acessar o protótipo</a>
   </div>
 
-  <div class="formulario" id="formulario">
-    <h2>📋 Agende seu Projeto</h2>
-    <p>Descreva em poucas palavras o projeto que você tem em mente. Retornaremos com um orçamento personalizado.</p>
-    
-    <textarea id="mensagem" placeholder="Ex: Quero um site para pizzaria com cardápio e botão de WhatsApp..."></textarea>
+  <!-- FORMULÁRIO PARA ORÇAMENTO VIA WHATSAPP -->
+<section style="margin-top: 80px; padding: 40px; background: #1a1a1a; border-radius: 10px; max-width: 800px; margin-left: auto; margin-right: auto;">
+  <h2 style="color: #ff914d; text-align: center;">📲 Solicite um Orçamento Rápido</h2>
+  <p style="text-align: center; color: #ccc;">Descreva brevemente o projeto que você tem em mente e receba uma resposta no WhatsApp.</p>
 
-    <a id="enviar" class="botao" href="#" target="_blank">📨 Enviar via WhatsApp</a>
-  </div>
+  <form onsubmit="enviarWhatsApp(); return false;" style="margin-top: 30px;">
+    <label for="nome" style="display:block; margin-bottom: 8px;">Seu nome:</label>
+    <input type="text" id="nome" required style="width: 100%; padding: 12px; border-radius: 6px; border: none; margin-bottom: 20px;">
+
+    <label for="descricao" style="display:block; margin-bottom: 8px;">Descrição do projeto:</label>
+    <textarea id="descricao" rows="4" required style="width: 100%; padding: 12px; border-radius: 6px; border: none; margin-bottom: 20px;"></textarea>
+
+    <button type="submit" style="width: 100%; padding: 14px; background: #ff914d; color: #000; font-weight: bold; border: none; border-radius: 8px; font-size: 16px;">
+      💬 Enviar para o WhatsApp
+    </button>
+  </form>
+</section>
+
+<script>
+  function enviarWhatsApp() {
+    const nome = document.getElementById("nome").value;
+    const descricao = document.getElementById("descricao").value;
+
+    const mensagem = `Olá! Me chamo ${nome}.%0AQuero um orçamento rápido para o seguinte projeto:%0A${descricao}`;
+    const telefone = "27996163425";
+    const url = `https://wa.me/${telefone}?text=${mensagem}`;
+
+    window.open(url, "_blank");
+  }
+</script>
 
   <div class="voltar">
     <a href="index.html">⬅️ Voltar para a página inicial</a>
