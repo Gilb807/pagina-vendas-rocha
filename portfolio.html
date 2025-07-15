@@ -5,49 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfólio | Rocha Digital</title>
   <style>
-    body {
+    :root {
+      --laranja: #ff914d;
+      --azul: #0a1a3d;
+      --branco: #ffffff;
+      --cinza: #f9f9f9;
+      --preto: #000000;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background-color: #0d0d0d;
-      color: #ffffff;
+      padding: 0;
+    }
+
+    body {
       font-family: Arial, sans-serif;
+      background-color: var(--branco);
+      color: var(--preto);
       padding: 40px 20px;
     }
 
     h1 {
-      color: #ff914d;
       text-align: center;
+      color: var(--azul);
+      font-size: 28px;
       margin-bottom: 10px;
     }
 
-    p {
+    p.intro {
       text-align: center;
       margin-bottom: 40px;
-      color: #ccc;
+      color: #555;
     }
 
     .projeto {
-      background: #1a1a1a;
+      background: var(--cinza);
       padding: 20px;
       margin: 20px auto;
       max-width: 800px;
-      border-left: 4px solid #ff914d;
+      border-left: 5px solid var(--laranja);
       border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
     .projeto h3 {
-      color: #ff914d;
+      color: var(--azul);
       margin-top: 0;
     }
 
     .projeto p {
-      color: #ddd;
+      color: #333;
     }
 
     .projeto a {
       display: inline-block;
       margin-top: 10px;
-      background: #ff914d;
-      color: #000;
+      background: var(--laranja);
+      color: var(--preto);
       padding: 10px 20px;
       border-radius: 5px;
       text-decoration: none;
@@ -58,22 +73,79 @@
       background: #ffa96c;
     }
 
+    .formulario {
+      background-color: var(--cinza);
+      padding: 30px;
+      max-width: 800px;
+      margin: 50px auto 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .formulario h2 {
+      color: var(--azul);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .formulario p {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .formulario textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: vertical;
+      margin-bottom: 20px;
+    }
+
+    .formulario a.botao {
+      background-color: #25D366;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      text-align: center;
+    }
+
+    .formulario a.botao:hover {
+      background-color: #1ebc59;
+    }
+
     .voltar {
       text-align: center;
       margin-top: 50px;
     }
 
     .voltar a {
-      color: #ff914d;
+      color: var(--laranja);
       text-decoration: none;
       font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .projeto, .formulario {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
 <body>
 
   <h1>📁 Meu Portfólio</h1>
-  <p>Conheça alguns projetos desenvolvidos com criatividade e impacto digital:</p>
+  <p class="intro">Conheça alguns projetos desenvolvidos com criatividade e impacto digital:</p>
 
   <div class="projeto">
     <h3>🍕 Pizza Tycoon CalabrinCoin</h3>
@@ -113,13 +185,37 @@
 
   <div class="projeto">
     <h3>✂️ Estilo Fino Barber</h3>
-    <p>Landing page institucional moderna para barbearia. <strong style="color: #ff914d;">⚠️ Página em construção</strong></p>
+    <p>Landing page institucional moderna para barbearia. <strong style="color: var(--laranja);">⚠️ Página em construção</strong></p>
     <a href="https://app--estilo-fino-barber-4e6730b3.base44.app/" target="_blank">🔗 Acessar o protótipo</a>
+  </div>
+
+  <div class="formulario" id="formulario">
+    <h2>📋 Agende seu Projeto</h2>
+    <p>Descreva em poucas palavras o projeto que você tem em mente. Retornaremos com um orçamento personalizado.</p>
+    
+    <textarea id="mensagem" placeholder="Ex: Quero um site para pizzaria com cardápio e botão de WhatsApp..."></textarea>
+
+    <a id="enviar" class="botao" href="#" target="_blank">📨 Enviar via WhatsApp</a>
   </div>
 
   <div class="voltar">
     <a href="index.html">⬅️ Voltar para a página inicial</a>
   </div>
+
+  <script>
+    const botao = document.getElementById("enviar");
+    const mensagem = document.getElementById("mensagem");
+
+    botao.addEventListener("click", function () {
+      const texto = encodeURIComponent(mensagem.value.trim());
+      if (texto) {
+        const url = `https://wa.me/5527999997863?text=${texto}`;
+        botao.href = url;
+      } else {
+        alert("Por favor, escreva algo antes de enviar.");
+      }
+    });
+  </script>
 
 </body>
 </html>
