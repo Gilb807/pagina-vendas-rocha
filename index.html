@@ -1,44 +1,86 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rocha Soluções Digitais</title>  <!-- Meta para compartilhamento -->  <meta property="og:title" content="Rocha Soluções Digitais">
+  <title>Rocha Soluções Digitais</title>
+
+  <!-- META PARA COMPARTILHAMENTO -->
+  <meta property="og:title" content="Rocha Soluções Digitais">
   <meta property="og:description" content="Soluções digitais para pequenos negócios com preço justo, agilidade e resultado.">
   <meta property="og:image" content="https://pagina-vendas-rocha.vercel.app/banner-hero.png">
   <meta property="og:url" content="https://pagina-vendas-rocha.vercel.app">
-  <meta name="twitter:card" content="summary_large_image">  <style>
-    :root {
-      --cor-primaria: #14213D;
-      --cor-secundaria: #FCA311;
-      --cor-fundo: #E5E5E5;
-      --cor-texto: #1A1A1A;
-      --cor-branca: #FFFFFF;
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--cor-fundo);
-      color: var(--cor-texto);
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      line-height: 1.6;
     }
 
     header {
-      background: var(--cor-primaria);
-      color: var(--cor-branca);
-      padding: 20px 40px;
+      background-color: #1a1a1a;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 40px;
       position: sticky;
       top: 0;
-      z-index: 999;
+      z-index: 100;
     }
 
-    nav a {
-      color: var(--cor-secundaria);
+    header nav a {
+      color: #ff914d;
       margin-left: 20px;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    #hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('banner-hero.png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    #hero h1 {
+      color: #fff;
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    #hero p {
+      font-size: 20px;
+      color: #ccc;
+      max-width: 600px;
+    }
+
+    .botao {
+      display: inline-block;
+      background-color: #ff914d;
+      color: #000;
+      padding: 14px 28px;
+      margin-top: 30px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .botao:hover {
+      background-color: #ffa76c;
     }
 
     section {
@@ -47,125 +89,157 @@
       margin: auto;
     }
 
-    .hero {
-      background: linear-gradient(to right, #14213D, #000000), url('banner-hero.png') no-repeat center/cover;
-      color: white;
-      text-align: center;
-      padding: 160px 20px;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
+    h2 {
+      color: #ff914d;
       margin-bottom: 20px;
-    }
-
-    .botao {
-      background-color: var(--cor-secundaria);
-      color: #000;
-      padding: 15px 25px;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      margin-top: 20px;
-      display: inline-block;
     }
 
     .servico-box {
-      background-color: white;
-      border-left: 4px solid var(--cor-secundaria);
+      background-color: #1a1a1a;
+      border-left: 4px solid #ff914d;
       padding: 20px;
-      border-radius: 8px;
       margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      border: none;
+    }
+
+    form button {
+      background-color: #ff914d;
+      color: #000;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
     }
 
     footer {
-      background-color: var(--cor-primaria);
-      color: #aaa;
+      background-color: #1a1a1a;
+      padding: 30px;
       text-align: center;
-      padding: 30px 10px;
-      font-size: 14px;
+      color: #888;
     }
 
     footer a {
-      color: var(--cor-secundaria);
+      color: #ff914d;
+      margin: 0 10px;
       text-decoration: none;
-      margin: 0 5px;
     }
 
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
+      #hero h1 {
+        font-size: 30px;
       }
-      nav {
+      header {
         flex-direction: column;
-        gap: 10px;
+        align-items: flex-start;
+      }
+      header nav {
+        margin-top: 10px;
       }
     }
-  </style></head>
+  </style>
+</head>
+
 <body>
   <header>
-    <div><strong>Rocha Soluções Digitais</strong></div>
+    <div><strong>Rocha Digital</strong></div>
     <nav>
-      <a href="#inicio">Início</a>
-      <a href="portfolio.html">Portfólio</a>
+      <a href="#hero">Início</a>
       <a href="#servicos">Serviços</a>
+      <a href="portfolio.html" target="_blank">Portfólio</a>
       <a href="#contato">Contato</a>
     </nav>
-  </header>  <!-- HERO -->  <section id="inicio" class="hero">
-    <h1>Soluções digitais para pequenos negócios</h1>
-    <a class="botao" href="portfolio.html">Ver Portfólio</a>
-    <a class="botao" href="https://wa.me/5527996163425" target="_blank">Fale pelo WhatsApp</a>
-  </section>  <!-- SERVIÇOS -->  <section id="servicos">
-    <h2>Serviços Oferecidos</h2><div class="servico-box">
-  <h3>Site Profissional</h3>
-  <p>Presença online com identidade forte e design responsivo.</p>
-  <strong>A partir de R$ 199</strong>
-</div>
+  </header>
 
-<div class="servico-box">
-  <h3>Cardápio Digital Interativo</h3>
-  <p>Perfeito para lanchonetes, pizzarias e delivery com botão para WhatsApp.</p>
-  <strong>A partir de R$ 149</strong>
-</div>
+  <section id="hero">
+    <h1>🚀 Soluções digitais para pequenos negócios</h1>
+    <p>Sites, apps, identidade visual, cardápio digital e automações com preço justo e agilidade.</p>
+    <a href="https://wa.me/5527996163425" class="botao" target="_blank">💬 Fale comigo no WhatsApp</a>
+  </section>
 
-<div class="servico-box">
-  <h3>Identidade Visual</h3>
-  <p>Logo, cores e estilo que comunicam a essência da sua marca.</p>
-  <strong>A partir de R$ 99</strong>
-</div>
+  <section id="servicos">
+    <h2>🛠️ Nossos Serviços</h2>
 
-<div class="servico-box">
-  <h3>Chatbot para WhatsApp</h3>
-  <p>Respostas automáticas, vendas 24h e atendimento inteligente.</p>
-  <strong>A partir de R$ 49</strong>
-</div>
+    <div class="servico-box">
+      <h3>🌐 Site Profissional</h3>
+      <p>Visual moderno, responsivo, rápido e otimizado para Google.</p>
+      <strong>R$ 199</strong>
+    </div>
 
-  <!-- CONTATO -->
-<section id="contato" style="background:#1a1a1a; color:#fff; padding:60px 30px; text-align:center; border-top: 2px solid #ff914d;">
-  <h2 style="color:#ff914d; margin-bottom: 20px;">📞 Entre em Contato</h2>
-  <p style="margin-bottom: 30px;">Fale com a gente diretamente pelo canal que preferir:</p>
+    <div class="servico-box">
+      <h3>📲 Cardápio Digital</h3>
+      <p>Ideal para lanchonetes, pizzarias e delivery. Fácil de editar.</p>
+      <strong>R$ 149</strong>
+    </div>
 
-  <div style="display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: auto;">
-    
-    <a href="https://wa.me/5527996163425" target="_blank" style="background:#25D366; color:white; padding:15px; border-radius:8px; text-decoration:none; font-weight:bold; display:flex; align-items:center; justify-content:center;">
-      💬 WhatsApp: (27) 99616-3425
-    </a>
+    <div class="servico-box">
+      <h3>🎨 Identidade Visual</h3>
+      <p>Logo, cores, tipografia e estilo visual completo da sua marca.</p>
+      <strong>R$ 99</strong>
+    </div>
 
-    <a href="mailto:premier.midia01@gmail.com" style="background:#ff914d; color:black; padding:15px; border-radius:8px; text-decoration:none; font-weight:bold; display:flex; align-items:center; justify-content:center;">
-      ✉️ E-mail: premier.midia01@gmail.com
-    </a>
+    <div class="servico-box">
+      <h3>🤖 Chatbot no WhatsApp</h3>
+      <p>Respostas automáticas e vendas enquanto você dorme.</p>
+      <strong>R$ 49</strong>
+    </div>
+  </section>
 
-    <a href="https://instagram.com/rocha_digital55" target="_blank" style="background:#E1306C; color:white; padding:15px; border-radius:8px; text-decoration:none; font-weight:bold; display:flex; align-items:center; justify-content:center;">
-      📸 Instagram: @rocha_digital55
-    </a>
-  </div>
-</section>  <footer>
-    © 2025 Rocha Soluções Digitais • Feito com ❤️<br>
-    <a href="https://wa.me/5527996163425">WhatsApp</a> |
+  <section id="orcamento">
+    <h2>📝 Solicite um Orçamento</h2>
+    <p>Preencha e receba seu orçamento direto no WhatsApp:</p>
+
+    <form onsubmit="enviarOrcamento(); return false;" style="max-width:600px; margin:auto;">
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <input type="email" id="email" placeholder="Seu e-mail" required>
+      <select id="servico">
+        <option value="Site Profissional">Site Profissional</option>
+        <option value="Cardápio Digital">Cardápio Digital</option>
+        <option value="Identidade Visual">Identidade Visual</option>
+        <option value="Chatbot WhatsApp">Chatbot WhatsApp</option>
+        <option value="Pacote Completo">Pacote Completo</option>
+      </select>
+      <textarea id="mensagem" rows="4" placeholder="Digite sua mensagem..."></textarea>
+      <button type="submit">📩 Enviar orçamento</button>
+    </form>
+  </section>
+
+  <section id="contato">
+    <h2>📞 Fale com a gente</h2>
+    <ul style="list-style:none; padding-left:0;">
+      <li>📱 WhatsApp: <a href="https://wa.me/5527996163425" target="_blank">Clique aqui</a></li>
+      <li>📧 E-mail: <a href="mailto:premier.midia01@gmail.com">premier.midia01@gmail.com</a></li>
+      <li>📸 Instagram: <a href="https://instagram.com/rocha_digital55" target="_blank">@rocha_digital55</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 Rocha Soluções Digitais • Feito com ❤️
+    <br>
+    <a href="https://wa.me/5527996163425" target="_blank">WhatsApp</a> |
     <a href="mailto:premier.midia01@gmail.com">E-mail</a> |
     <a href="https://instagram.com/rocha_digital55" target="_blank">Instagram</a>
   </footer>
+
+  <script>
+    function enviarOrcamento() {
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const servico = document.getElementById("servico").value;
+      const mensagem = document.getElementById("mensagem").value;
+
+      const texto = `Olá, me chamo *${nome}*!\n\nQuero solicitar um orçamento para o serviço de *${servico}*.\n\n📧 E-mail: ${email}\n📝 Mensagem: ${mensagem}`;
+      const numero = "5527996163425";
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+      window.open(url, "_blank");
+    }
+  </script>
 </body>
-                         </html>
+</html>
